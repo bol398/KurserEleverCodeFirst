@@ -14,19 +14,8 @@ namespace SQL
         public int StudentID { get; set; }
 
         public string Name { get; set; }
-        
-    }
 
-    public class SchoolContext : DbContext
-    {
-        private const string connectionString = "Server=localhost;Database=EFCore;Trusted_Connection=True";
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(connectionString);
-        }
-
-        public DbSet<Student> Students { get; set; }
+        public int KursID;
         
     }
 }
